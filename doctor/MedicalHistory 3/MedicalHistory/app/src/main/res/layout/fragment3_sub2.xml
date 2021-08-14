@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragment2">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers= ""
+            android:divider="@drawable/divider_line"
+            android:padding="@android:dimen/app_icon_size"
+            tools:ignore="MissingConstraints">
+            <!--        第一层 专科查体-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:layout_gravity="center"
+                android:text="专科查体"/>
+
+            <Spinner
+                android:id="@+id/专科查体选择"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/专科查体选择"
+                android:textSize="16sp"
+                />
+            <LinearLayout
+                android:id="@+id/骨肉瘤提示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="步行/平车/轮椅入病房，神智是否清楚？ 患者左腿/右腿，上端/下端疼痛，是否肿胀？皮温是否升高？皮肤有无破损有无橘皮样改变，是否触及肿物？肿物质软/质硬/质韧，边界是否清楚？有无压痛？活动是否受限？活动度？肢体末端血运，皮肤感觉，足趾活动正常？"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/脊柱转移提示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="神志清楚/不清，平车/轮椅/步行入病房，双上肢皮肤感觉正常/异常，乳头平面以下皮肤触觉存在/消失，痛温觉消失/存在，腹壁反射、提睾反射消失/存在、双侧髂腰肌肌力---级，余双下肢主要肌力---级。四肢肌张力无/正常。双下肢末梢血运可/差。双侧肱二头肌腱反射、肱三头肌腱反射、桡骨膜反射正常/异常，双膝腱反射、跟腱反射消失/存在，双侧双侧髌阵挛、踝阵挛未引出/正常，双侧babinski征阴性/阳性。有无叩击痛，压痛，肛门括约肌有无自主收缩。活动是否受限，肢体末端血运，皮肤感觉，足趾活动正常？"/>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

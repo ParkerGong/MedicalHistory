@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragment2">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers= ""
+            android:divider="@drawable/divider_line"
+            android:padding="@android:dimen/app_icon_size"
+            tools:ignore="MissingConstraints">
+            <!--  X片-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:layout_gravity="center"
+                android:text="X片"/>
+            <Button
+                android:id="@+id/X片拍照"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+            <Button
+                android:id="@+id/X片拍照显示"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏"/>
+            <ImageView
+                android:id="@+id/X片显示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+
+            <!--  CT-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:layout_gravity="center"
+                android:text="CT"/>
+            <Button
+                android:id="@+id/CT拍照"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+            <Button
+                android:id="@+id/CT拍照显示"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏"/>
+            <ImageView
+                android:id="@+id/CT显示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+            <!--  MRI-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:layout_gravity="center"
+                android:text="MRI"/>
+            <Button
+                android:id="@+id/MRI拍照"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+            <Button
+                android:id="@+id/MRI拍照显示"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏"/>
+            <ImageView
+                android:id="@+id/MRI显示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+            <!-- 骨扫描-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:layout_gravity="center"
+                android:text="骨扫描"/>
+            <Button
+                android:id="@+id/骨扫描拍照"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+            <Button
+                android:id="@+id/骨扫描拍照显示"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏"/>
+            <ImageView
+                android:id="@+id/骨扫描显示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+
+            <!--  PET-CT-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:layout_gravity="center"
+                android:text="PET-CT"/>
+            <Button
+                android:id="@+id/PETCT拍照"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+            <Button
+                android:id="@+id/PETCT拍照显示"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏"/>
+            <ImageView
+                android:id="@+id/PETCT显示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+
+            <!--  超声-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:layout_gravity="center"
+                android:text="超声"/>
+            <Button
+                android:id="@+id/超声拍照"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+            <Button
+                android:id="@+id/超声拍照显示"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏"/>
+            <ImageView
+                android:id="@+id/超声显示"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200px" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

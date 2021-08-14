@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xml:include="./fragment_main1.xml"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MedicalHistory.AppBarOverlay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="left">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/appbar_padding"
+                android:text="@string/name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/床位"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:entries="@array/床号" />
+
+
+
+            <Button
+                android:id="@+id/lianjie"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_shape"
+                android:foregroundGravity="center"
+                android:shadowColor="@color/black"
+                android:text="@string/linjie"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="start|bottom" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+
+
+
+            <Button
+                android:id="@+id/chuanghao1"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_shape"
+                android:shadowColor="@color/black"
+                android:foregroundGravity="center"
+                android:text="获取患者病历"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="end|bottom" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_shape"
+                android:shadowColor="@color/black"
+                android:foregroundGravity="center"
+                android:text="@string/send"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="end|bottom" />
+
+
+
+            <TextView
+                android:id="@+id/tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/appbar_padding"
+                android:text="@string/hint"
+                android:textColor="@color/black"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="bottom|center" />
+
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tex2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="@dimen/appbar_padding"-->
+<!--                android:text="waiting link"-->
+<!--                android:textColor="@color/black"-->
+<!--                app:layout_anchor="@+id/view_pager"-->
+<!--                app:layout_anchorGravity="bottom|center" />-->
+
+
+        </LinearLayout>
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorControlActivated" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <EditText
+            android:id="@+id/nosp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="无特殊"/>
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
