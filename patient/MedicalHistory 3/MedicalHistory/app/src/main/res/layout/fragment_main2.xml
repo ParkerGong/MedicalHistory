@@ -1027,7 +1027,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="月经史生育史:"
+                android:text="月经史生育史:（男性不填写）"
 
                 android:textSize="80px" />
 
@@ -1180,6 +1180,7 @@
                     android:id="@+id/几岁结婚"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:hint="未婚/结婚年龄"
                     android:text="27" />
 
                 <TextView
@@ -1192,7 +1193,8 @@
                     android:id="@+id/生育几胎"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="28" />
+                    android:hint="未生育则填0"
+                    android:text="0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -1245,25 +1247,31 @@
                 android:showDividers="middle"
                 tools:ignore="MissingConstraints">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="父"
-                    android:textSize="16sp" />
-
                 <EditText
-                    android:id="@+id/父健在"
+                    android:id="@+id/家族史等"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="患病"
-                    android:text="健在" />
+                    android:text="家族中无传染病及遗传病史"/>
 
-                <EditText
-                    android:id="@+id/父已故"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="死因"
-                    android:text="已故" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="父"-->
+<!--                    android:textSize="16sp" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/父健在"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="患病"-->
+<!--                    android:text="健在" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/父已故"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="死因"-->
+<!--                    android:text="已故" />-->
 
             </LinearLayout>
 
@@ -1276,48 +1284,25 @@
                 android:showDividers="middle"
                 tools:ignore="MissingConstraints">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="母"
-                    android:textSize="16sp" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="母"-->
+<!--                    android:textSize="16sp" />-->
 
-                <EditText
-                    android:id="@+id/母健在"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="患病"
-                    android:text="健在" />
+<!--                <EditText-->
+<!--                    android:id="@+id/母健在"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="患病"-->
+<!--                    android:text="健在" />-->
 
-                <EditText
-                    android:id="@+id/母已故"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="死因"
-                    android:text="已故" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:divider="@drawable/divider_line"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:showDividers="middle"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="兄弟姐妹及子女："
-                    android:textSize="16sp" />
-
-                <EditText
-                    android:id="@+id/兄弟姐妹及子女"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="正常" />
+<!--                <EditText-->
+<!--                    android:id="@+id/母已故"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="死因"-->
+<!--                    android:text="已故" />-->
 
             </LinearLayout>
 
@@ -1330,17 +1315,40 @@
                 android:showDividers="middle"
                 tools:ignore="MissingConstraints">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="其他："
-                    android:textSize="16sp" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="兄弟姐妹及子女："-->
+<!--                    android:textSize="16sp" />-->
 
-                <EditText
-                    android:id="@+id/其他家族史"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="正常" />
+<!--                <EditText-->
+<!--                    android:id="@+id/兄弟姐妹及子女"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="正常" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_line"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:showDividers="middle"
+                tools:ignore="MissingConstraints">
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="其他："-->
+<!--                    android:textSize="16sp" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/其他家族史"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="正常" />-->
 
             </LinearLayout>
 

@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
                     public void run() {
                         super.run();
-                        String strUrl="http://192.168.186.100:8000/connect/";
+                        String strUrl="http://192.168.186.102:8000/connect/";
                         URL url=null;
                         try {
                             text.post(() -> text.setText("尝试与服务器建立连接"));
@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void run() {
                 super.run();
-                String strUrl="http://192.168.186.100:8000/text_recv/";
+                String strUrl="http://192.168.186.102:8000/text_recv/";
                 URL url=null;
                 try {
 
@@ -520,7 +520,7 @@ public class MainActivity extends AppCompatActivity {
             public void run()
             {
                 super.run();
-                String strUrl="http://192.168.186.100:8000/picture_recv/";
+                String strUrl="http://192.168.186.102:8000/picture_recv/";
                 URL url=null;
                 try
                 {
