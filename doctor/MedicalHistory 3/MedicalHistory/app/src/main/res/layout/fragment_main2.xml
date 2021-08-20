@@ -21,23 +21,7 @@
         android:divider="@drawable/divider_line"
         android:padding="@android:dimen/app_icon_size"
         tools:ignore="MissingConstraints">
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:showDividers="middle|end"
-            android:divider="@drawable/divider_line"
-            tools:ignore="MissingConstraints">
 
-            <!--确认-->
-
-            <Button
-                android:id="@+id/确认信息"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="确认信息"/>
-
-        </LinearLayout>
 
 
         <!--        第一层 主诉层-->
@@ -1167,27 +1151,60 @@
             android:divider="@drawable/divider_line"
             android:padding="10dp"
             tools:ignore="MissingConstraints">
-            <TextView
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="父"/>
             <EditText
-                android:id="@+id/父健在"
+                android:id="@+id/家族史等"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="健在"
-                android:hint="患病"/>
-            <EditText
-                android:id="@+id/父已故"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:hint="死因\病因（无则不填）"
+                android:text="家族中无传染病及遗传病史"/>
+<!--            <TextView-->
+<!--                android:textSize="16sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="父"/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/父健在"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="健在"-->
+<!--                android:hint="患病"/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/父已故"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=""-->
+<!--                android:hint="死因\病因（无则不填）"-->
+<!--                />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="@drawable/divider_line"
+            android:padding="10dp"
+            tools:ignore="MissingConstraints">
+<!--            <TextView-->
+<!--                android:textSize="16sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="母"/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/母健在"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="健在"-->
+<!--                android:hint="患病"/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/母已故"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=""-->
+<!--                android:hint="死因\病因（无则不填）"-->
                 />
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -1196,44 +1213,16 @@
             android:divider="@drawable/divider_line"
             android:padding="10dp"
             tools:ignore="MissingConstraints">
-            <TextView
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="母"/>
-            <EditText
-                android:id="@+id/母健在"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="健在"
-                android:hint="患病"/>
-            <EditText
-                android:id="@+id/母已故"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:hint="死因\病因（无则不填）"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:showDividers="middle"
-            android:divider="@drawable/divider_line"
-            android:padding="10dp"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="兄弟姐妹及子女："/>
-            <EditText
-                android:id="@+id/兄弟姐妹及子女"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="正常"/>
+<!--            <TextView-->
+<!--                android:textSize="16sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="兄弟姐妹及子女："/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/兄弟姐妹及子女"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="正常"/>-->
 
         </LinearLayout>
 
@@ -1245,16 +1234,33 @@
             android:divider="@drawable/divider_line"
             android:padding="10dp"
             tools:ignore="MissingConstraints">
-            <TextView
-                android:textSize="16sp"
+<!--            <TextView-->
+<!--                android:textSize="16sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="其他："/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/其他家族史"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="正常"/>-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle|end"
+            android:divider="@drawable/divider_line"
+            tools:ignore="MissingConstraints">
+
+            <!--确认-->
+
+            <Button
+                android:id="@+id/确认信息"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="其他："/>
-            <EditText
-                android:id="@+id/其他家族史"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="正常"/>
+                android:text="确认信息"/>
 
         </LinearLayout>
         <TextView

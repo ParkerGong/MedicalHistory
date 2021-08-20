@@ -78,6 +78,16 @@ public class PlaceholderFragment2 extends Fragment {
         final EditText t16 = root.findViewById(R.id.结婚年龄);
         final EditText t17 = root.findViewById(R.id.配偶情况);
         final EditText t18 = root.findViewById(R.id.疼痛肿胀1);
+        final EditText t19 = root.findViewById(R.id.初潮年龄);
+        final EditText t20 = root.findViewById(R.id.经期);
+        final EditText t21 = root.findViewById(R.id.周期);
+        final EditText t22 = root.findViewById(R.id.绝经年龄);
+        final EditText t23 = root.findViewById(R.id.末次月经);
+        final EditText t24 = root.findViewById(R.id.几岁结婚);
+        final EditText t25 = root.findViewById(R.id.生育几胎);
+        final EditText t26 = root.findViewById(R.id.家族史等);
+
+
 
 
 
@@ -178,6 +188,30 @@ public class PlaceholderFragment2 extends Fragment {
         Spinner s24 =(Spinner)root.findViewById(R.id.患病部位);
         spinner(s24,name24);
 
+        List<String> name25 = Collections.singletonList("yuejing6");
+        Spinner s25 =(Spinner)root.findViewById(R.id.经量);
+        spinner(s25,name25);
+
+        List<String> name26 = Collections.singletonList("yuejing7");
+        Spinner s26 =(Spinner)root.findViewById(R.id.有无血块);
+        spinner(s26,name26);
+
+        List<String> name27 = Collections.singletonList("yuejing8");
+        Spinner s27 =(Spinner)root.findViewById(R.id.有无痛经);
+        spinner(s27,name27);
+
+        List<String> name28 = Collections.singletonList("yuejing9");
+        Spinner s28 =(Spinner)root.findViewById(R.id.白带);
+        spinner(s28,name28);
+
+        List<String> name29 = Collections.singletonList("yuejing12");
+        Spinner s29 =(Spinner)root.findViewById(R.id.有无早产等);
+        spinner(s29,name29);
+
+        List<String> name30 = Collections.singletonList("yuejing13");
+        Spinner s30 =(Spinner)root.findViewById(R.id.早产等);
+        spinner(s30,name30);
+
 
 
 
@@ -187,10 +221,10 @@ public class PlaceholderFragment2 extends Fragment {
 
 
         List<EditText> text = Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,
-                                            t15,t16,t17,t18);
+                                            t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26);
         List<String> name = Arrays.asList("xianbing1","xianbing2","xianbing8","xianbing10","xianbing12",
                 "xianbing13","xianbing14","xianbing20","xianbing19","jiwang2","jiwang3","jiwang8",
-                "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2");
+                "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2","yuejing1","yuejing2","yuejing3","yuejing4","yuejing5","yuejing10","yuejing11","jiazu1");
         setEdit(name,text);
 
 
