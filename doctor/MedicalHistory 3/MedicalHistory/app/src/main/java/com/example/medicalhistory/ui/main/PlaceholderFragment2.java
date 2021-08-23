@@ -66,6 +66,16 @@ public class PlaceholderFragment2 extends Fragment {
     private static Spinner s28;
     private static Spinner s29;
     private static Spinner s30;
+    private static Spinner s31;
+    private static Spinner s32;
+    private static Spinner s33;
+    private static Spinner s34;
+    private static Spinner s35;
+    private static Spinner s36;
+    private static Spinner s37;
+
+
+
 
 
     @SuppressLint("StaticFieldLeak")
@@ -95,6 +105,17 @@ public class PlaceholderFragment2 extends Fragment {
     private static EditText t24;
     private static EditText t25;
     private static EditText t26;
+    private static EditText t27;
+    private static EditText t28;
+    private static EditText t29;
+    private static EditText t30;
+    private static EditText t31;
+    private static EditText t32;
+    private static EditText t33;
+    private static EditText t34;
+    private static EditText t35;
+
+
 
     private PageViewModel pageViewModel;
 
@@ -151,9 +172,26 @@ public class PlaceholderFragment2 extends Fragment {
         t24 = root.findViewById(R.id.几岁结婚);
         t25 = root.findViewById(R.id.生育几胎);
         t26 = root.findViewById(R.id.家族史等);
+        t27 = root.findViewById(R.id.曾到过);
+        t28 = root.findViewById(R.id.抽烟年);
+        t29 = root.findViewById(R.id.抽烟根);
+        t30 = root.findViewById(R.id.喝酒年);
+        t31 = root.findViewById(R.id.喝酒两);
+        t32 = root.findViewById(R.id.淋巴结数量);
+        t33 = root.findViewById(R.id.淋巴结大小);
+        t34 = root.findViewById(R.id.淋巴结质地);
+        t35 = root.findViewById(R.id.淋巴结活动度);
 
 
 
+        List<EditText> text = Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,
+                t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,
+                t27,t28,t29,t30,t31);
+        List<String> name = Arrays.asList("xianbing1","xianbing2","xianbing8","xianbing10","xianbing12",
+                "xianbing13","xianbing14","xianbing20","xianbing19","jiwang2","jiwang3","jiwang8",
+                "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2","yuejing1","yuejing2","yuejing3",
+                "yuejing4","yuejing5","yuejing10","yuejing11","jiazu1","geren17","geren10","geren11","geren12",
+                "geren13");
 
         List<String> name1 = Collections.singletonList("xianbing3");
         s1 =(Spinner)root.findViewById(R.id.起病缓急);
@@ -274,49 +312,68 @@ public class PlaceholderFragment2 extends Fragment {
         List<String> name30 = Collections.singletonList("yuejing13");
         s30 =(Spinner)root.findViewById(R.id.早产等);
 
+        List<String> name31 = Collections.singletonList("geren14");
+        s31 =(Spinner)root.findViewById(R.id.重大精神创伤史);
 
+
+        List<String> name32 = Collections.singletonList("geren15");
+        s32 =(Spinner)root.findViewById(R.id.冶游史);
+
+
+        List<String> name33 = Collections.singletonList("geren16");
+        s33 =(Spinner)root.findViewById(R.id.居住环境);
+
+
+
+
+        spinner(s33,name33);
+        spinner(s32,name32);
+        spinner(s31,name31);
+        spinner(s30,name30);
+        spinner(s29,name29);
+        spinner(s28,name28);
+        spinner(s27,name27);
+        spinner(s26,name26);
+        spinner(s25,name25);
+        spinner(s24,name24);
+        spinner(s23,name23);
+        spinner(s22,name22);
+        spinner(s21,name21);
+        spinner(s20,name20);
+        spinner(s19,name19);
+        spinner(s18,name18);
+        spinner(s17,name17);
+        spinner(s16,name16);
+        spinner(s15,name15);
+        spinner(s14,name14);
+        spinner(s13,name13);
+        spinner(s12,name12);
+        spinner(s11,name11);
+        spinner(s10,name10);
+        spinner(s9,name9);
+        spinner(s8,name8);
+        spinner(s7,name7);
+        spinner(s6,name6);
+        spinner(s5,name5);
+        spinner(s4,name4);
+        spinner(s3,name3);
+        spinner(s2,name2);
+        spinner(s1,name1);
 
 
         root.findViewById(R.id.确认信息).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                spinner(s30,name30);
-                spinner(s29,name29);
-                spinner(s28,name28);
-                spinner(s27,name27);
-                spinner(s26,name26);
-                spinner(s25,name25);
-                spinner(s24,name24);
-                spinner(s23,name23);
-                spinner(s22,name22);
-                spinner(s21,name21);
-                spinner(s20,name20);
-                spinner(s19,name19);
-                spinner(s18,name18);
-                spinner(s17,name17);
-                spinner(s16,name16);
-                spinner(s15,name15);
-                spinner(s14,name14);
-                spinner(s13,name13);
-                spinner(s12,name12);
-                spinner(s11,name11);
-                spinner(s10,name10);
-                spinner(s9,name9);
-                spinner(s8,name8);
-                spinner(s7,name7);
-                spinner(s6,name6);
-                spinner(s5,name5);
-                spinner(s4,name4);
-                spinner(s3,name3);
-                spinner(s2,name2);
-                spinner(s1,name1);
+
                 List<EditText> text = Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,
-                        t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26);
+                        t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,
+                        t27,t28,t29,t30,t31);
                 List<String> name = Arrays.asList("xianbing1","xianbing2","xianbing8","xianbing10","xianbing12",
                         "xianbing13","xianbing14","xianbing20","xianbing19","jiwang2","jiwang3","jiwang8",
-                        "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2","yuejing1","yuejing2",
-                        "yuejing3","yuejing4","yuejing5","yuejing10","yuejing11","jiazu1");
+                        "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2","yuejing1","yuejing2","yuejing3",
+                        "yuejing4","yuejing5","yuejing10","yuejing11","jiazu1","geren17","geren10","geren11","geren12",
+                        "geren13");
                 setEdit(name,text);
                 MainActivity mainActivity = (MainActivity) getActivity();
                 TextView textView =  mainActivity.findViewById(R.id.tex);
@@ -408,6 +465,11 @@ public class PlaceholderFragment2 extends Fragment {
                 setET(MainActivity.ceshi, "yuejing10", t24);
                 setET(MainActivity.ceshi, "yuejing11", t25);
                 setET(MainActivity.ceshi, "jiazu1", t26);
+                setET(MainActivity.ceshi, "geren17", t27);
+                setET(MainActivity.ceshi, "geren10", t28);
+                setET(MainActivity.ceshi, "geren11", t29);
+                setET(MainActivity.ceshi, "geren12", t30);
+                setET(MainActivity.ceshi, "geren13", t31);
 
                 setSP(MainActivity.ceshi, "xianbing3", s1);
                 setSP(MainActivity.ceshi, "xianbing4", s2);
@@ -439,6 +501,9 @@ public class PlaceholderFragment2 extends Fragment {
                 setSP(MainActivity.ceshi, "yuejing9", s28);
                 setSP(MainActivity.ceshi, "yuejing12", s29);
                 setSP(MainActivity.ceshi, "yuejing13", s30);
+                setSP(MainActivity.ceshi, "geren14", s30);
+                setSP(MainActivity.ceshi, "geren15", s31);
+                setSP(MainActivity.ceshi, "geren16", s32);
 
             } catch (JSONException e) {
                 e.printStackTrace();

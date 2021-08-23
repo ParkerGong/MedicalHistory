@@ -42,7 +42,7 @@
             android:layout_weight="1"
             android:textSize="65px"
             tools:ignore="LabelFor"
-            android:text="张三"
+            android:hint="张三"
             />
         <!--gender-->
         <TextView
@@ -60,7 +60,7 @@
             android:layout_weight="1"
             android:textSize="65px"
             tools:ignore="LabelFor"
-            android:text="男"
+            android:hint="男/女"
             />
         <!--age-->
         <TextView
@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:textSize="65px"
             tools:ignore="LabelFor"
-            android:text="21"
+            android:hint="如：21"
 
             />
         </LinearLayout>
@@ -107,7 +107,7 @@
                 android:layout_weight="1"
                 android:textSize="65px"
                 tools:ignore="LabelFor"
-                android:text="医生"
+                android:hint="如：医生"
                 />
             <!--nation-->
             <TextView
@@ -125,7 +125,7 @@
                 android:layout_weight="1"
                 android:textSize="65px"
                 tools:ignore="LabelFor"
-                android:text="汉族"
+                android:hint="如：汉族"
                 />
             <!--marriage-->
             <TextView
@@ -143,7 +143,7 @@
                 android:layout_weight="1"
                 android:textSize="65px"
                 tools:ignore="LabelFor"
-                android:text="未婚"
+                android:hint="未婚/已婚"
                 />
         </LinearLayout>
         <!--third line-->
@@ -171,7 +171,7 @@
                 android:layout_weight="1"
                 android:textSize="65px"
                 tools:ignore="LabelFor"
-                android:text="北京"
+                android:hint="如：北京"
                 />
             <!--workplace-->
             <TextView
@@ -189,7 +189,7 @@
                 android:layout_weight="1"
                 android:textSize="65px"
                 tools:ignore="LabelFor"
-                android:text="交通大学"
+                android:hint="请填写工作单位"
                 />
             <!--address-->
             <TextView
@@ -207,7 +207,7 @@
                 android:layout_weight="1"
                 android:textSize="65px"
                 tools:ignore="LabelFor"
-                android:text="海淀"
+                android:hint="请填写现住址"
                 />
         </LinearLayout>
 
@@ -237,7 +237,7 @@
                 android:layout_weight="1"
                 android:textSize="55px"
                 tools:ignore="LabelFor"
-                android:text="10010"
+                android:hint="请填写电话"
                 />
             <!--admission date-->
             <TextView
@@ -256,8 +256,8 @@
                 android:layout_weight="1"
                 android:textSize="55px"
                 tools:ignore="LabelFor"
-                android:hint="如：2021.8.1"
-                android:text="2021.8.1"
+                android:hint="如：2021.1.1"
+
                 />
             <!--record date-->
             <TextView
@@ -274,9 +274,9 @@
                 android:autofillHints="1"
                 android:layout_weight="1"
                 android:textSize="55px"
-                android:hint="如：2021.8.1"
+                android:hint="如：2021.1.1"
                 tools:ignore="LabelFor"
-                android:text="2021.8.1"
+
                 />
         </LinearLayout>
 
@@ -307,7 +307,7 @@
                 android:textSize="65px"
                 tools:ignore="LabelFor"
                 android:hint="本人/家属"
-                android:text="本人"
+
                 />
             <!--reliability level-->
             <TextView
@@ -327,6 +327,23 @@
                 tools:ignore="LabelFor"
                 android:text="可靠"
                 />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle|end"
+            android:divider="@drawable/divider_line"
+            tools:ignore="MissingConstraints">
+
+            <!--确认-->
+
+            <Button
+                android:id="@+id/确认信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认信息"/>
 
         </LinearLayout>
 

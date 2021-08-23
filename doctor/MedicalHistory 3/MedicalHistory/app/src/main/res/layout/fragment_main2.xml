@@ -65,7 +65,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 tools:ignore="LabelFor"
-                android:text="疼痛3个月"
+                android:text=""
                 android:hint="如：疼痛3个月"
                 />
 
@@ -109,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="如：3个月"
-                android:text="3个月"
+                android:text=""
                 />
 
             <TextView
@@ -200,7 +200,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="如：3小时"
-                android:text="3小时"/>
+                android:text=""/>
             <TextView
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
@@ -251,7 +251,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="如:3小时"
-                android:text="3小时"/>
+                android:text=""/>
             <TextView
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
@@ -676,7 +676,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="北京"
+                android:text=""
                 />
             <TextView
                 android:textSize="16sp"
@@ -688,7 +688,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="北京"
+                android:text=""
                 />
             <TextView
                 android:textSize="16sp"
@@ -731,7 +731,7 @@
                 android:id="@+id/抽烟年"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:hint="无则填0"
                 android:text="0"
                 />
             <TextView
@@ -743,8 +743,21 @@
                 android:id="@+id/抽烟根"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:hint="无则填0"
                 android:text="0"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="@drawable/divider_line"
+            android:padding="10dp"
+            tools:ignore="MissingConstraints">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -764,7 +777,7 @@
                 android:id="@+id/喝酒年"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:hint="无则填0"
                 android:text="0"
                 />
             <TextView
@@ -776,13 +789,14 @@
                 android:id="@+id/喝酒两"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:hint="无则填0"
                 android:text="0"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="两/日"
                 android:textSize="16sp"/>
+
 
 
         </LinearLayout>
@@ -922,7 +936,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="适龄结婚，婚后育有1女"
+                android:hint="如：适龄结婚，婚后育有1女"
                 android:text="未婚"
                 />
             <TextView
@@ -936,7 +950,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="无配偶子女"
-                android:hint="配偶及子女均体健"
+                android:hint="如：配偶及子女均体健"
                 />
         </LinearLayout>
 
@@ -978,7 +992,7 @@
                 android:id="@+id/初潮年龄"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14"/>
+                android:text=""/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -988,7 +1002,7 @@
                 android:id="@+id/经期"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7"/>
+                android:text=""/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -998,17 +1012,35 @@
                 android:id="@+id/周期"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="31"/>
+                android:text=""/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="天，绝经年龄"
+                android:text="天"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="@drawable/divider_line"
+            android:padding="10dp"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绝经年龄"
                 android:textSize="16sp"/>
             <EditText
                 android:id="@+id/绝经年龄"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未绝经"/>
+                android:hint="填写：绝经年龄/未绝经"
+                android:text=""/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1018,7 +1050,10 @@
                 android:id="@+id/末次月经"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="无"/>
+                android:hint="如：2021.1.1"
+                android:text=""/>
+
+
 
         </LinearLayout>
 
@@ -1089,7 +1124,7 @@
                 android:id="@+id/几岁结婚"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="27"/>
+                android:text=""/>
             <TextView
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
@@ -1099,7 +1134,8 @@
                 android:id="@+id/生育几胎"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="28"/>
+                android:hint="无则填0"
+                android:text=""/>
             <TextView
                 android:textSize="16sp"
                 android:layout_width="wrap_content"

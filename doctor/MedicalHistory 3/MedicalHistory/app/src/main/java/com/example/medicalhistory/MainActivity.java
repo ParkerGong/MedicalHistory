@@ -1,6 +1,8 @@
 package com.example.medicalhistory;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -22,6 +24,7 @@ import android.text.Editable;
 import android.text.SpannableStringBuilder;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,7 +66,7 @@ import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    private static String URL = "http://192.168.1.100:8000";
     public static boolean s1;
     private static TextView text;
     private static TextView text2;
@@ -110,6 +113,15 @@ public class MainActivity extends AppCompatActivity {
 
         Spinner s1 =(Spinner)findViewById(R.id.床位);
         spinner(s1);
+        Button reboot = (Button)findViewById(R.id.reboot);
+        //重设APP
+        reboot.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNormalDialog();
+
+            }
+        });
 
         send.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -121,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
 
                         super.run();
-                        String strUrl="http://192.168.186.102:8000/create_doc/";
+                        String strUrl=URL+"/create_doc/";
                         URL url=null;
                         try {
                             //检查是否有空的，有的话就补充，防止出现空value
@@ -139,7 +151,13 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
 
+                            Spinner s1 =(Spinner)findViewById(R.id.床位);
+                            String chaunghaosend = s1.getSelectedItem().toString();
+                            HashMap<String,String> test = new HashMap<>();
+                            Editable chuanghaosendED = new SpannableStringBuilder(chaunghaosend);
+                            hashMap.put("chuanghao",chuanghaosendED);
 
+                            System.out.println(chaunghaosend);
                             text.post(() -> text.setText("正在发送"));
                             JSONObject jsonObject = new JSONObject(String.valueOf(hashMap));
                             System.out.println("-------------------------------");
@@ -177,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void run() {
                 super.run();
-                String strUrl="http://192.168.186.102:8000/connect/";
+                String strUrl=URL+"/connect/";
                 URL url=null;
                 try {
                     text.post(() -> text.setText("尝试与服务器建立连接"));
@@ -225,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run()
                     {
                         super.run();
-                        String strUrl="http://192.168.186.102:8000/docter_send_text/";
+                        String strUrl=URL+"/docter_send_text/";
 
                         URL url=null;
                         try {
@@ -400,7 +418,7 @@ public class MainActivity extends AppCompatActivity {
             public void run()
             {
                 super.run();
-                String strUrl="http://192.168.186.102:8000/docter_send_imag/";
+                String strUrl=URL+"/docter_send_imag/";
 
                 URL url=null;
                 try {
@@ -447,6 +465,50 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
+    private void showNormalDialog(){
+        /* @setIcon 设置对话框图标
+         * @setTitle 设置对话框标题
+         * @setMessage 设置对话框消息提示
+         * setXXX方法返回Dialog对象，因此可以链式设置属性
+         */
+        final AlertDialog.Builder normalDialog =
+                new AlertDialog.Builder(MainActivity.this);
+        normalDialog.setTitle("确认是否重设所有");
+        normalDialog.setMessage("重设后将清除本次填写的所有数据（仅限医生操作）");
+
+        normalDialog.setPositiveButton("确定清除",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+
+                        final Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+
+                        //杀掉以前进程
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                    }
+                });
+        normalDialog.setNegativeButton("取消",
+                (dialog, which) -> {
+                    //...To-do
+                });
+        // 显示
+        final AlertDialog dialog = normalDialog.create();
+        dialog.show();
+
+        Button mNegativeButton = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+        Button mPositiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+
+        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) mNegativeButton.getLayoutParams();
+        params.leftMargin = 10;
+        params.rightMargin = 50;
+        mNegativeButton.setLayoutParams(params);
+
+
+    }
+
     private void send(String s,byte[] im)
     {
         new Thread() {
@@ -456,7 +518,7 @@ public class MainActivity extends AppCompatActivity {
             public void run()
             {
                 super.run();
-                String strUrl="http://192.168.186.102:8000/picture_recv/";
+                String strUrl=URL+"/picture_recv/";
                 URL url=null;
                 try
                 {

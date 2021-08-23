@@ -128,7 +128,7 @@ public class Sub4Fragment1 extends PlaceholderFragment1 {
             public void onClick(View v) {
                 File XCGphotoFile = new File(localPath1, "XCG.png");
                 photoFile1 = new File(localPath1, "XCG.png");
-                System.out.println("-------------------------------------------------------------");
+                System.out.println("---------------------------XCG----------------------------------");
                 System.out.println(localPath1);
                 System.out.println(PatientID);
                 playPhoto(root,XCGphotoFile);
@@ -156,6 +156,9 @@ public class Sub4Fragment1 extends PlaceholderFragment1 {
             public void onClick(View v) {
                 File NCGphotoFile = new File(localPath1, "NCG.png");
                 photoFile1 = new File(localPath1, "NCG.png");
+                System.out.println("-----------------------------NCG--------------------------------");
+                System.out.println(localPath1);
+                System.out.println(PatientID);
                 playPhoto(root,NCGphotoFile);
             }
         });
@@ -179,6 +182,9 @@ public class Sub4Fragment1 extends PlaceholderFragment1 {
             public void onClick(View v) {
                 File NXphotoFile = new File(localPath1, "NXx.png");
                 photoFile1 = new File(localPath1, "NXx.png");
+                System.out.println("------------------------------NX-------------------------------");
+                System.out.println(localPath1);
+                System.out.println(PatientID);
                 playPhoto(root,NXphotoFile);
             }
         });
@@ -202,6 +208,9 @@ public class Sub4Fragment1 extends PlaceholderFragment1 {
             public void onClick(View v) {
                 File SHphotoFile = new File(localPath1, "SHx.png");
                 photoFile1 = new File(localPath1, "SHx.png");
+                System.out.println("--------------------------------SH-----------------------------");
+                System.out.println(localPath1);
+                System.out.println(PatientID);
                 playPhoto(root,SHphotoFile);
             }
         });
@@ -224,7 +233,10 @@ public class Sub4Fragment1 extends PlaceholderFragment1 {
             @Override
             public void onClick(View v) {
                 File ZLBZWphotoFile = new File(localPath1, "ZLx.png");
-                photoFile1 = new File(localPath1, "ZL.png");
+                photoFile1 = new File(localPath1, "ZLx.png");
+                System.out.println("------------------------------ZL-------------------------------");
+                System.out.println(localPath1);
+                System.out.println(PatientID);
                 playPhoto(root,ZLBZWphotoFile);
             }
         });

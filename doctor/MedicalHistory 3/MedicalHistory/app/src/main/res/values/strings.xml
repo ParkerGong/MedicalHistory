@@ -299,9 +299,9 @@
         <item>肿大</item>
     </string-array>
     <string-array name="罗马度">
-        <item>I</item>
-        <item>II</item>
-        <item>III</item>
+        <item>I°</item>
+        <item>II°</item>
+        <item>III°</item>
     </string-array>
     <string-array name="咽">
         <item>无充血</item>

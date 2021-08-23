@@ -20,11 +20,15 @@ import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
+import com.example.medicalhistory_patient.MainActivity;
 import com.example.medicalhistory_patient.R;
 import com.soundcloud.android.crop.Crop;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStream;
+
+import id.zelory.compressor.Compressor;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -191,7 +195,7 @@ public class Sub4Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 File PETCTphotoFile = new File(localPath1, "PET.png");
-                photoFile1 = new File(localPath1, "PET0.png");
+                photoFile1 = new File(localPath1, "PET.png");
                 playPhoto(root,PETCTphotoFile);
             }
         });
@@ -259,7 +263,24 @@ public class Sub4Fragment2 extends Fragment {
         if (resultCode == RESULT_OK) {
             if (requestCode == 100) {
                 //该方式获取到的图片是原图
+
                 Crop.of(Uri.fromFile(photoFile1), Uri.fromFile(photoFile1)).start(getActivity());
+                //压缩图片
+                photoFile1 = Compressor.getDefault(this.getContext()).compressToFile(photoFile1);
+
+                //把照片名字取出来
+                String photoNameString = photoFile1.toString();
+                String photoName = photoNameString.substring(photoNameString.length()-8,photoNameString.length()-5);
+                System.out.println("--------------------------------------------");
+                System.out.println(photoName);
+                InputStream zhuanhua= null;
+
+
+                try {
+                    MainActivity.PictureListSet(photoName,photoNameString);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

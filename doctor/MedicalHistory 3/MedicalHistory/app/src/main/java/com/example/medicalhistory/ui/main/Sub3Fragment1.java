@@ -254,6 +254,10 @@ public class Sub3Fragment1 extends PlaceholderFragment1 {
         final EditText t48 = root.findViewById(R.id.四肢特点);
         final EditText t49 = root.findViewById(R.id.肌力几级);
         final EditText t50 = root.findViewById(R.id.瘫痪部位及程度);
+        final EditText t51 = root.findViewById(R.id.淋巴结数量);
+        final EditText t52 = root.findViewById(R.id.淋巴结大小);
+        final EditText t53 = root.findViewById(R.id.淋巴结质地);
+        final EditText t54 = root.findViewById(R.id.淋巴结活动度);
 
 
 
@@ -1161,12 +1165,27 @@ public class Sub3Fragment1 extends PlaceholderFragment1 {
         Spinner s219 =(Spinner)root.findViewById(R.id.Brudzinski氏征阴性阳性);
         spinner(s219,name219);
 
+        List<String> name220 = Collections.singletonList("lin1");
+        Spinner s220 =(Spinner)root.findViewById(R.id.全身浅表淋巴结有无);
+        spinner(s220,name220);
+
+        List<String> name221 = Collections.singletonList("lin2");
+        Spinner s221 =(Spinner)root.findViewById(R.id.全身淋巴结部位);
+        spinner(s221,name221);
+
+        List<String> name222 = Collections.singletonList("lin6");
+        Spinner s222 =(Spinner)root.findViewById(R.id.淋巴结有无压痛);
+        spinner(s222,name222);
+
+        List<String> name223 = Collections.singletonList("lin7");
+        Spinner s223 =(Spinner)root.findViewById(R.id.淋巴结有无粘连);
+        spinner(s223,name223);
 
 
 
 
-        List<EditText> text = Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,t27,t28,t29,t30,t31,t32,t33,t34,t35,t36,t37,t38,t39,t40,t41,t42,t43,t44,t45,t46,t47,t48,t49,t50);
-        List<String> name = Arrays.asList("tiwen","maibo","xueya1","xueya2","shengao","tizhong","BMI","pifu9","pifu12","toulu8","yan13","yan14","er3","kou4","huxi","xiong9","ru8","fei14","fei15","fei16","fei17","fei18","xin4","xin6","xin7","xin11","xin13","xin14","xin18","xin26","fu8","fu10","fu15","fu19","fu21","fu23","fu24","fu33","fu34","fu35","fu41","fu48","fu49","fu51","fu57","fu60","jizhu6","jizhu16","shen5","shen7");
+        List<EditText> text = Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,t27,t28,t29,t30,t31,t32,t33,t34,t35,t36,t37,t38,t39,t40,t41,t42,t43,t44,t45,t46,t47,t48,t49,t50,t51,t52,t53,t54);
+        List<String> name = Arrays.asList("tiwen","maibo","xueya1","xueya2","shengao","tizhong","BMI","pifu9","pifu12","toulu8","yan13","yan14","er3","kou4","huxi","xiong9","ru8","fei14","fei15","fei16","fei17","fei18","xin4","xin6","xin7","xin11","xin13","xin14","xin18","xin26","fu8","fu10","fu15","fu19","fu21","fu23","fu24","fu33","fu34","fu35","fu41","fu48","fu49","fu51","fu57","fu60","jizhu6","jizhu16","shen5","shen7","lin3","lin4","lin5","lin8");
 
         setEdit(name,text);
 

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -86,6 +87,11 @@ public class PlaceholderFragment2 extends Fragment {
         final EditText t24 = root.findViewById(R.id.几岁结婚);
         final EditText t25 = root.findViewById(R.id.生育几胎);
         final EditText t26 = root.findViewById(R.id.家族史等);
+        final EditText t27 = root.findViewById(R.id.曾到过);
+        final EditText t28 = root.findViewById(R.id.抽烟年);
+        final EditText t29 = root.findViewById(R.id.抽烟根);
+        final EditText t30 = root.findViewById(R.id.喝酒年);
+        final EditText t31 = root.findViewById(R.id.喝酒两);
 
 
 
@@ -212,6 +218,18 @@ public class PlaceholderFragment2 extends Fragment {
         Spinner s30 =(Spinner)root.findViewById(R.id.早产等);
         spinner(s30,name30);
 
+        List<String> name31 = Collections.singletonList("geren14");
+        Spinner s31 =(Spinner)root.findViewById(R.id.重大精神创伤史);
+        spinner(s31,name31);
+
+        List<String> name32 = Collections.singletonList("geren15");
+        Spinner s32 =(Spinner)root.findViewById(R.id.冶游史);
+        spinner(s32,name32);
+
+        List<String> name33 = Collections.singletonList("geren16");
+        Spinner s33 =(Spinner)root.findViewById(R.id.居住环境);
+        spinner(s33,name33);
+
 
 
 
@@ -221,12 +239,35 @@ public class PlaceholderFragment2 extends Fragment {
 
 
         List<EditText> text = Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,
-                                            t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26);
+                                            t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,
+                                            t27,t28,t29,t30,t31);
         List<String> name = Arrays.asList("xianbing1","xianbing2","xianbing8","xianbing10","xianbing12",
                 "xianbing13","xianbing14","xianbing20","xianbing19","jiwang2","jiwang3","jiwang8",
-                "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2","yuejing1","yuejing2","yuejing3","yuejing4","yuejing5","yuejing10","yuejing11","jiazu1");
+                "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2","yuejing1","yuejing2","yuejing3",
+                "yuejing4","yuejing5","yuejing10","yuejing11","jiazu1","geren17","geren10","geren11","geren12",
+                "geren13");
         setEdit(name,text);
 
+        root.findViewById(R.id.确认信息).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                List<EditText> text1 = Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,
+                        t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,
+                        t27,t28,t29,t30,t31);
+                List<String> name1 = Arrays.asList("xianbing1","xianbing2","xianbing8","xianbing10","xianbing12",
+                        "xianbing13","xianbing14","xianbing20","xianbing19","jiwang2","jiwang3","jiwang8",
+                        "jiwang10","jiwang11","geren1","geren8","geren9","zhusu2","yuejing1","yuejing2","yuejing3",
+                        "yuejing4","yuejing5","yuejing10","yuejing11","jiazu1","geren17","geren10","geren11","geren12",
+                        "geren13");
+                setEdit(name,text);
+                MainActivity mainActivity = (MainActivity) getActivity();
+                TextView textView =  mainActivity.findViewById(R.id.tex);
+                textView.post(() -> textView.setText("成功确认病史采集信息"));
+            }
+
+        });
 
         return root;
     }

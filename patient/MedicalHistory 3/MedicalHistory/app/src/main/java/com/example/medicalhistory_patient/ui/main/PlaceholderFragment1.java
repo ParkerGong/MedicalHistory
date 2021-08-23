@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -67,6 +68,18 @@ public class PlaceholderFragment1 extends Fragment {
         List<EditText> text = Arrays.asList(t1, t2, t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14);
         List<String> name = Arrays.asList("name","gender","age","job","nation","marriage1","birth_p","workplace","address","phone","admission_date","record_date","teller","reliability");
         setEdit(name,text);
+        root.findViewById(R.id.确认信息).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                TextView textView =  mainActivity.findViewById(R.id.tex);
+
+                List<EditText> text = Arrays.asList(t1, t2, t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14);
+                List<String> name = Arrays.asList("name","gender","age","job","nation","marriage1","birth_p","workplace","address","phone","admission_date","record_date","teller","reliability");
+                setEdit(name,text);
+                textView.post(() -> textView.setText("成功确认患者基本信息"));
+            }
+        });
         return root;
     }
 }

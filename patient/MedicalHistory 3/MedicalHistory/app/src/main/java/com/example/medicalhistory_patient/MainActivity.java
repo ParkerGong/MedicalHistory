@@ -69,7 +69,7 @@ import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    private static String URL = "http://192.168.1.100:8000";
     private static Collection<Editable> strings;
     private static TextView text;
     private static final HashMap<String,Editable> hashMap = new HashMap<>();
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
                     public void run() {
                         super.run();
-                        String strUrl="http://192.168.186.102:8000/connect/";
+                        String strUrl=URL+"/connect/";
                         URL url=null;
                         try {
                             text.post(() -> text.setText("尝试与服务器建立连接"));
@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void run() {
                 super.run();
-                String strUrl="http://192.168.186.102:8000/text_recv/";
+                String strUrl=URL+"/text_recv/";
                 URL url=null;
                 try {
 
@@ -342,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
                 Date start = dateFormat.parse(dateFormat.format(new Date(file.lastModified())));
                 long diff = end.getTime() - start.getTime();//这样得到的差值是微秒级别
                 long days = diff / (1000 * 60 * 60 * 24);
-                if(1 <= days){
+                if(14 <= days){
                     deleteFile2(file);
                 }
 
@@ -520,7 +520,7 @@ public class MainActivity extends AppCompatActivity {
             public void run()
             {
                 super.run();
-                String strUrl="http://192.168.186.102:8000/picture_recv/";
+                String strUrl=URL+"/picture_recv/";
                 URL url=null;
                 try
                 {
@@ -546,7 +546,16 @@ public class MainActivity extends AppCompatActivity {
                     dd.close();
                     System.out.println(con.getResponseCode());
                     con.disconnect();
-                    text.post(() -> text.setText("发送成功"));
+                    if(con.getResponseCode()==200)
+                    {
+                        text.post(() -> text.setText("发送成功"));
+                    }
+                    else{
+                        text.post(() -> text.setText("发送失败,请重新发送"));
+                    }
+
+                    System.out.println("-------------------xxxxx--------------------");
+                    System.out.println(im.length);
                 } catch (IOException e) {
                     e.printStackTrace();
                     text.post(() -> text.setText("发送失败"));

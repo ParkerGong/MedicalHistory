@@ -95,6 +95,18 @@
                 app:layout_anchor="@+id/view_pager"
                 app:layout_anchorGravity="bottom|center" />
 
+            <Button
+                android:id="@+id/reboot"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_shape"
+                android:shadowColor="@color/black"
+                android:foregroundGravity="center"
+                android:text="重制所有"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="end|bottom" />
+
 
 
 <!--            <TextView-->
