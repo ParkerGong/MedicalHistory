@@ -1,0 +1,833 @@
+<resources>
+    <string name="app_name">MedicalHistory</string>
+    <string name="tab_text_1">基本信息</string>
+    <string name="tab_text_2">病史采集</string>
+    <string name="tab_text_3">系统查体</string>
+    <string name="tab_text_4">专科查体</string>
+    <string name="tab_text_5">辅助检查</string>
+    <string name="tab_text_6">初步诊断</string>
+    <string name="tige1">系统查体</string>
+    <string name="tige2">专科查体</string>
+    <string name="fuzhu1">化验</string>
+    <string name="fuzhu2">检查</string>
+    <string name="sub3">体格检查</string>
+    <string name="sub4">辅助检查</string>
+    <string name="sub5">初步诊断</string>
+    <string name="name">病历</string>
+    <string name="xingming">姓名:</string>
+    <string name="tengtongzhongzhang">疼痛、肿胀(/月)</string>
+    <string name="tiwen">体温(/°C)</string>
+    <string name="maibo">脉搏(次/分)</string>
+    <string name="huxi">呼吸(次/分)</string>
+    <string name="xuya">血压(/mmHg)</string>
+    <string name="gang">/</string>
+    <string name="qianganjue">浅感觉：</string>
+    <string name="shenganjue">深感觉：</string>
+    <string name="send">上传病历</string>
+    <string name="linjie">连接服务器</string>
+    <string name="hint">----未连接服务器</string>
+    <string name="xingbie">性别:</string>
+    <string name="age">年龄:</string>
+    <string name="job">职业:</string>
+    <string name="nation">民族:</string>
+    <string name="marriage">婚姻:</string>
+    <string name="birthplace">出生地:</string>
+    <string name="workplace">工作单位:</string>
+    <string name="adDate">入院日期:</string>
+    <string name="phone">电话:</string>
+    <string name="recordDate">记录日期:</string>
+    <string name="teller">病史陈述者:</string>
+    <string name="reliability">可靠程度:</string>
+
+    <string-array name="大腿小腿膝关节">
+        <item>大腿</item>
+        <item>膝关节</item>
+        <item>小腿</item>
+    </string-array>
+
+    <string-array name="平素健康状况">
+        <item>良好</item>
+        <item>一般</item>
+        <item>较差</item>
+    </string-array>
+
+    <string-array name="高血压等">
+        <item>无</item>
+        <item>高血压</item>
+        <item>糖尿病</item>
+        <item>冠心病</item>
+        <item>肾病</item>
+    </string-array>
+
+    <string-array name="小时天月选择">
+        <item>小时</item>
+        <item>天</item>
+        <item>月</item>
+    </string-array>
+
+    <string-array name="分钟小时天月选择">
+        <item>分钟</item>
+        <item>小时</item>
+        <item>天</item>
+        <item>月</item>
+    </string-array>
+
+    <string-array name="急性慢性">
+        <item>急性</item>
+        <item>慢性</item>
+    </string-array>
+
+    <string-array name="轻中重">
+        <item>轻</item>
+        <item>中</item>
+        <item>重</item>
+    </string-array>
+
+    <string-array name="差一般良好">
+        <item>一般</item>
+        <item>良好</item>
+        <item>差</item>
+    </string-array>
+
+    <string-array name="多正常少">
+        <item>正常</item>
+        <item>多</item>
+        <item>少</item>
+    </string-array>
+
+    <string-array name="失眠一般良好">
+        <item>失眠</item>
+        <item>一般</item>
+        <item>良好</item>
+    </string-array>
+
+    <string-array name="正常便秘失禁">
+        <item>正常</item>
+        <item>便秘</item>
+        <item>失禁</item>
+    </string-array>
+
+    <string-array name="持续间歇等">
+        <item>持续</item>
+        <item>间歇</item>
+        <item>静息痛</item>
+        <item>活动痛</item>
+    </string-array>
+
+    <string-array name="有无">
+        <item>无</item>
+        <item>有</item>
+    </string-array>
+
+    <string-array name="有无tou">
+        <item>有</item>
+        <item>无</item>
+
+    </string-array>
+
+    <string-array name="是否">
+        <item>否</item>
+        <item>是</item>
+    </string-array>
+
+    <string-array name="有无xin">
+        <item>无</item>
+        <item>有</item>
+    </string-array>
+
+    <string-array name="正常异常">
+        <item>正常</item>
+        <item>异常</item>
+    </string-array>
+
+    <string-array name="加重缓解">
+        <item>加重</item>
+        <item>缓解</item>
+    </string-array>
+
+    <string-array name="休息药物">
+        <item>休息</item>
+        <item>药物</item>
+    </string-array>
+
+    <string-array name="早产等">
+        <item>早产</item>
+        <item>流产</item>
+        <item>手术产</item>
+        <item>死产</item>
+        <item>产褥热</item>
+    </string-array>
+
+
+    <string-array name="疟疾等">
+        <item>疟疾</item>
+        <item>痢疾</item>
+        <item>肝炎</item>
+        <item>结核</item>
+    </string-array>
+
+    <string-array name="无痛疼痛肿胀">
+        <item>无痛</item>
+        <item>疼痛</item>
+        <item>肿胀</item>
+    </string-array>
+
+    <string-array name="头正常吗">
+        <item>正常</item>
+        <item>畸形</item>
+    </string-array>
+    <string-array name="头形">
+        <item>尖颅</item>
+        <item>方颅</item>
+        <item>变形颅</item>
+    </string-array>
+    <string-array name="毛病">
+        <item>疥癣</item>
+        <item>瘢痕</item>
+    </string-array>
+
+    <string-array name="眼睑">
+        <item>正常</item>
+        <item>水肿</item>
+        <item>内翻</item>
+        <item>下翻</item>
+        <item>下垂</item>
+        <item>左挛缩</item>
+        <item>右挛缩</item>
+    </string-array>
+    <string-array name="眼球">
+        <item>正常</item>
+        <item>凸出</item>
+        <item>凹陷</item>
+        <item>震颤</item>
+        <item>斜视</item>
+        <item>左运动障碍</item>
+        <item>右运动障碍</item>
+    </string-array>
+    <string-array name="结膜">
+        <item>正常</item>
+        <item>充血</item>
+        <item>水肿</item>
+        <item>苍白</item>
+        <item>出血</item>
+        <item>滤泡</item>
+        <item>左翼状胬肉</item>
+        <item>右翼状胬肉</item>
+    </string-array>
+    <string-array name="巩膜">
+        <item>轻度</item>
+        <item>中度</item>
+        <item>重度</item>
+    </string-array>
+    <string-array name="角膜">
+        <item>正常</item>
+        <item>浑浊</item>
+        <item>白斑</item>
+        <item>左云翳</item>
+        <item>右云翳</item>
+    </string-array>
+    <string-array name="角膜反射">
+        <item>正常</item>
+        <item>迟钝</item>
+        <item>消失</item>
+    </string-array>
+    <string-array name="等圆等大">
+        <item>等圆等大</item>
+        <item>不等圆等大</item>
+    </string-array>
+    <string-array name="视野缺损">
+        <item>无缺损</item>
+        <item>右缺损</item>
+        <item>左缺损</item>
+    </string-array>
+    <string-array name="鼻泪管通畅">
+        <item>全部通畅</item>
+        <item>左不通畅</item>
+        <item>右不通畅</item>
+        <item>全部不通畅</item>
+    </string-array>
+    <string-array name="耳廓">
+        <item>正常</item>
+        <item>畸形</item>
+    </string-array>
+    <string-array name="外耳道异常分泌物">
+        <item>无分泌</item>
+        <item>左有分泌</item>
+        <item>右有分泌</item>
+        <item>全部有分泌</item>
+    </string-array>
+    <string-array name="左右">
+        <item>左</item>
+        <item>右</item>
+        <item>全部</item>
+    </string-array>
+    <string-array name="正常消失">
+        <item>正常</item>
+        <item>消失</item>
+    </string-array>
+    <string-array name="口唇">
+        <item>红润</item>
+        <item>发绀</item>
+        <item>苍白</item>
+        <item>皲裂</item>
+        <item>疱疹</item>
+    </string-array>
+    <string-array name="牙齿">
+        <item>缺齿</item>
+        <item>义齿</item>
+        <item>龋齿</item>
+        <item>残根</item>
+    </string-array>
+    <string-array name="齿龈">
+        <item>正常</item>
+        <item>肿胀</item>
+        <item>溢脓</item>
+        <item>出血</item>
+        <item>色素沉着</item>
+        <item>铅线</item>
+        <item>红线</item>
+        <item>萎缩</item>
+    </string-array>
+    <string-array name="舌">
+        <item>伸出居中</item>
+        <item>震颤</item>
+        <item>左偏斜</item>
+        <item>右偏斜</item>
+    </string-array>
+    <string-array name="扁桃体">
+        <item>正常</item>
+        <item>肿大</item>
+    </string-array>
+    <string-array name="罗马度">
+        <item>I°</item>
+        <item>II°</item>
+        <item>III°</item>
+    </string-array>
+    <string-array name="咽">
+        <item>无充血</item>
+        <item>充血</item>
+        <item>肿胀</item>
+        <item>化脓</item>
+        <item>淋巴滤泡增生</item>
+    </string-array>
+    <string-array name="颈">
+        <item>软</item>
+        <item>抵抗感</item>
+        <item>强直</item>
+    </string-array>
+    <string-array name="颈静脉">
+        <item>正常</item>
+        <item>充盈</item>
+        <item>怒张</item>
+    </string-array>
+    <string-array name="正常增强">
+        <item>正常</item>
+        <item>增强</item>
+    </string-array>
+    <string-array name="气管">
+        <item>居中</item>
+        <item>左偏移</item>
+        <item>右偏移</item>
+    </string-array>
+    <string-array name="甲状腺">
+        <item>正常</item>
+        <item>左肿大</item>
+        <item>右肿大</item>
+    </string-array>
+    <string-array name="质地">
+        <item>软</item>
+        <item>中等</item>
+        <item>硬</item>
+    </string-array>
+    <string-array name="喉发音">
+        <item>正常</item>
+        <item>低吨</item>
+        <item>嘶哑</item>
+    </string-array>
+    <string-array name="data4">
+        <item>痛觉</item>
+        <item>温感觉</item>
+        <item>触觉</item>
+    </string-array>
+    <string-array name="data5">
+        <item>正常</item>
+        <item>减退</item>
+        <item>消失</item>
+    </string-array>
+
+
+
+    <!--new-->
+    <string-array name="营养情况">
+        <item>良好</item>
+        <item>中等</item>
+        <item>不良</item>
+        <item>恶病质</item>
+    </string-array>
+
+    <string-array name="体型">
+        <item>匀称</item>
+        <item>肥胖</item>
+        <item>消瘦</item>
+    </string-array>
+
+    <string-array name="专科查体选择">
+        <item>骨肉瘤</item>
+        <item>脊柱转移</item>
+    </string-array>
+
+    <string-array name="体位">
+        <item>自动</item>
+        <item>被动</item>
+        <item>强迫</item>
+    </string-array>
+
+    <string-array name="病容">
+        <item>急性病容</item>
+        <item>慢性病容</item>
+        <item>无特殊病容</item>
+    </string-array>
+
+    <string-array name="表情">
+        <item>自如</item>
+        <item>痛苦</item>
+        <item>焦虑</item>
+        <item>无欲</item>
+        <item>欣快</item>
+    </string-array>
+
+    <string-array name="步态">
+        <item>正常</item>
+        <item>慌张</item>
+        <item>醉汉</item>
+        <item>跛行</item>
+    </string-array>
+
+    <string-array name="语言">
+        <item>清晰流利</item>
+        <item>呻吟样</item>
+        <item>失语</item>
+    </string-array>
+
+    <string-array name="神志">
+        <item>意识清楚</item>
+        <item>嗜睡</item>
+        <item>谵妄</item>
+        <item>浅昏迷</item>
+        <item>深昏迷</item>
+    </string-array>
+
+    <string-array name="对答">
+        <item>切题</item>
+        <item>不切题</item>
+    </string-array>
+
+    <string-array name="配合检查">
+        <item>合作</item>
+        <item>不合作</item>
+    </string-array>
+
+    <string-array name="色泽">
+        <item>正常</item>
+        <item>不合作</item>
+    </string-array>
+
+    <string-array name="黄染">
+        <item>无</item>
+        <item>轻度</item>
+        <item>中度</item>
+        <item>重度</item>
+    </string-array>
+
+    <string-array name="皮损">
+        <item>无</item>
+        <item>丘疹</item>
+        <item>斑丘疹</item>
+        <item>疱疹</item>
+        <item>白斑</item>
+        <item>瘢痕</item>
+        <item>溃疡</item>
+        <item>脱屑</item>
+    </string-array>
+
+    <string-array name="皮肤温度与适度">
+        <item>正常</item>
+        <item>冷</item>
+        <item>暖</item>
+        <item>干</item>
+        <item>湿</item>
+    </string-array>
+
+    <string-array name="皮肤弹性">
+        <item>正常</item>
+        <item>减退</item>
+    </string-array>
+
+    <string-array name="桶状胸等">
+        <item>桶状胸</item>
+        <item>扁平胸</item>
+        <item>鸡胸</item>
+        <item>漏斗胸</item>
+        <item>局部隆起</item>
+        <item>凹陷</item>
+    </string-array>
+
+    <string-array name="乳头形状">
+        <item>正常</item>
+        <item>抬高</item>
+        <item>凹陷</item>
+        <item>偏斜</item>
+        <item>分泌物</item>
+    </string-array>
+
+    <string-array name="左右有无">
+        <item>无</item>
+        <item>左有</item>
+        <item>右有</item>
+        <item>双侧都有</item>
+    </string-array>
+
+    <string-array name="呼吸胸式等">
+        <item>胸式</item>
+        <item>腹式</item>
+        <item>胸腹式</item>
+    </string-array>
+
+    <string-array name="对称">
+        <item>对称</item>
+        <item>不对称</item>
+    </string-array>
+
+    <string-array name="正常增强减弱">
+        <item>正常</item>
+        <item>左增强</item>
+        <item>左减弱</item>
+        <item>右增强</item>
+        <item>右减弱</item>
+    </string-array>
+
+    <string-array name="正常增强变窄">
+        <item>正常</item>
+        <item>增强</item>
+        <item>变窄</item>
+    </string-array>
+
+    <string-array name="叩诊呈">
+        <item>清音</item>
+        <item>过清音</item>
+        <item>浊音</item>
+        <item>实音</item>
+        <item>鼓音</item>
+    </string-array>
+
+    <string-array name="规整不规整">
+        <item>规整</item>
+        <item>不规整</item>
+    </string-array>
+
+    <string-array name="正常增强减弱消失">
+        <item>正常</item>
+        <item>左增强</item>
+        <item>左减弱</item>
+        <item>右增强</item>
+        <item>右减弱</item>
+        <item>左消失</item>
+        <item>右消失</item>
+    </string-array>
+
+    <string-array name="水泡音">
+        <item>大水泡音</item>
+        <item>中水泡音</item>
+        <item>小水泡音</item>
+    </string-array>
+
+    <string-array name="正常增强减弱消失简">
+        <item>正常</item>
+        <item>增强</item>
+        <item>减弱</item>
+        <item>消失</item>
+    </string-array>
+
+    <string-array name="正常未见">
+        <item>正常</item>
+        <item>未见</item>
+        <item>减弱</item>
+        <item>弥散</item>
+    </string-array>
+
+    <string-array name="正常分裂">
+        <item>正常</item>
+        <item>增强</item>
+        <item>减弱</item>
+        <item>分裂</item>
+    </string-array>
+
+    <string-array name="内外">
+        <item>内侧</item>
+        <item>外侧</item>
+    </string-array>
+
+    <string-array name="正常扩大">
+        <item>正常</item>
+        <item>扩大</item>
+        <item>缩小</item>
+        <item>消失</item>
+    </string-array>
+
+    <string-array name="齐不齐">
+        <item>齐</item>
+        <item>不齐</item>
+    </string-array>
+
+    <string-array name="舒张期">
+        <item>舒张期</item>
+        <item>收缩期前</item>
+        <item>重叠</item>
+    </string-array>
+
+    <string-array name="对称膨隆凹陷舟状腹">
+        <item>对称</item>
+        <item>膨隆</item>
+        <item>凹陷</item>
+        <item>舟状腹</item>
+    </string-array>
+
+    <string-array name="正常凸起分泌物">
+        <item>正常</item>
+        <item>凸起</item>
+        <item>分泌物</item>
+    </string-array>
+
+    <string-array name="存在缩小消失">
+        <item>存在</item>
+        <item>缩小</item>
+        <item>消失</item>
+    </string-array>
+
+    <string-array name="阴性阳性">
+        <item>阴性</item>
+        <item>阳性</item>
+    </string-array>
+
+    <string-array name="正常亢进减弱消失">
+        <item>正常</item>
+        <item>亢进</item>
+        <item>减弱</item>
+        <item>消失</item>
+    </string-array>
+
+    <string-array name="柔软紧张">
+        <item>柔软</item>
+        <item>紧张</item>
+    </string-array>
+
+    <string-array name="未触及可触及">
+        <item>未触及</item>
+        <item>可触及</item>
+    </string-array>
+
+    <string-array name="光滑结节">
+        <item>光滑</item>
+        <item>结节</item>
+    </string-array>
+
+    <string-array name="锐钝">
+        <item>锐</item>
+        <item>钝</item>
+    </string-array>
+
+    <string-array name="柔软中等硬坚硬">
+        <item>柔软</item>
+        <item>中等</item>
+        <item>硬</item>
+        <item>坚硬</item>
+    </string-array>
+
+
+
+
+    <string-array name="空虚膨胀">
+        <item>空虚</item>
+        <item>膨胀</item>
+    </string-array>
+
+    <string-array name="床号">
+        <item>1床</item>
+        <item>2床</item>
+        <item>3床</item>
+        <item>4床</item>
+        <item>5床</item>
+        <item>6床</item>
+        <item>7床</item>
+        <item>8床</item>
+        <item>9床</item>
+        <item>10床</item>
+        <item>11床</item>
+        <item>12床</item>
+        <item>13床</item>
+        <item>14床</item>
+        <item>15床</item>
+        <item>16床</item>
+        <item>17床</item>
+        <item>18床</item>
+        <item>19床</item>
+        <item>20床</item>
+        <item>21床</item>
+        <item>22床</item>
+        <item>23床</item>
+        <item>24床</item>
+        <item>25床</item>
+        <item>26床</item>
+        <item>27床</item>
+        <item>28床</item>
+        <item>29床</item>
+        <item>30床</item>
+        <item>31床</item>
+        <item>32床</item>
+        <item>33床</item>
+        <item>34床</item>
+        <item>35床</item>
+        <item>36床</item>
+        <item>37床</item>
+        <item>38床</item>
+        <item>39床</item>
+        <item>40床</item>
+        <item>41床</item>
+        <item>42床</item>
+        <item>43床</item>
+        <item>44床</item>
+        <item>45床</item>
+        <item>46床</item>
+        <item>47床</item>
+        <item>48床</item>
+        <item>49床</item>
+        <item>50床</item>
+        <item>51床</item>
+        <item>52床</item>
+        <item>53床</item>
+        <item>54床</item>
+        <item>55床</item>
+        <item>56床</item>
+        <item>57床</item>
+        <item>58床</item>
+        <item>59床</item>
+        <item>60床</item>
+    </string-array>
+
+    <!--淋巴结肛门脊柱神经                           -->
+    <string-array name="全身淋巴结部位">
+        <item>颈部</item>
+        <item>颌下</item>
+        <item>耳后</item>
+        <item>锁骨上窝</item>
+        <item>腋窝</item>
+        <item>肘部</item>
+        <item>腹股沟</item>
+        <item>其他:</item>
+    </string-array>
+
+    <string-array name="肛门直肠外生殖器状况">
+        <item>未查</item>
+        <item>正常</item>
+        <item>异常</item>
+    </string-array>
+
+    <string-array name="脊柱正常或畸形">
+        <item>正常</item>
+        <item>畸形：侧凸</item>
+        <item>畸形：前凸</item>
+        <item>畸形：后凸</item>
+    </string-array>
+
+    <string-array name="活动度正常或受限">
+        <item>正常</item>
+        <item>受限</item>
+    </string-array>
+
+    <string-array name="关节有无红肿热积液等">
+        <item>红</item>
+        <item>肿</item>
+        <item>热</item>
+        <item>积液</item>
+        <item>强直</item>
+        <item>变形</item>
+    </string-array>
+
+    <string-array name="肌肉有无压痛萎缩">
+        <item>压痛</item>
+        <item>萎缩</item>
+    </string-array>
+
+    <string-array name="神经系统浅感觉">
+        <item>痛觉</item>
+        <item>温感觉</item>
+        <item>触觉</item>
+    </string-array>
+
+    <string-array name="神经系统感觉正常减退消失">
+        <item>正常</item>
+        <item>减退</item>
+        <item>消失</item>
+
+    </string-array>
+
+    <string-array name="肌张力正常增强减弱消失">
+        <item>正常</item>
+        <item>增强</item>
+        <item>减弱</item>
+        <item>消失</item>
+    </string-array>
+
+    <string-array name="浅反射">
+        <item>正常</item>
+        <item>减弱</item>
+        <item>消失</item>
+    </string-array>
+
+    <string-array name="深反射">
+        <item>正常</item>
+        <item>亢进</item>
+        <item>减弱</item>
+        <item>消失</item>
+    </string-array>
+
+
+
+    <!--    new   -->
+    <string-array name="正常增强或减弱">
+        <item>正常</item>
+        <item>增强</item>
+        <item>减弱</item>
+    </string-array>
+
+    <string-array name="左和右">
+        <item>左</item>
+        <item>右</item>
+    </string-array>
+
+    <string-array name="正常增强减弱或消失">
+        <item>正常</item>
+        <item>增强</item>
+        <item>减弱</item>
+        <item>消失</item>
+    </string-array>
+
+    <string-array name="鼾音哨笛音等">
+        <item>鼾音</item>
+        <item>哨笛音等</item>
+    </string-array>
+
+    <string-array name="正常畸形">
+        <item>正常</item>
+        <item>畸形</item>
+    </string-array>
+
+    <string-array name="侧凸前凸后凸">
+        <item>侧凸</item>
+        <item>前凸</item>
+        <item>后凸</item>
+    </string-array>
+
+
+
+</resources>

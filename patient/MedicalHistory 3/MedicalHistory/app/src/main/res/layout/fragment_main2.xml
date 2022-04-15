@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragment2">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers= ""
+            android:divider="@drawable/divider_line"
+            android:padding="@android:dimen/app_icon_size"
+            tools:ignore="MissingConstraints">
+
+
+
+            <!--        第一层 主诉层-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|middle|end"
+                android:divider="@drawable/divider_line"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+
+                android:text="主诉:"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+
+                <Spinner
+                    android:id="@+id/患病部位"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/大腿小腿膝关节"/>
+
+                <TextView
+                    android:id="@+id/疼痛肿胀"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/tengtongzhongzhang" />
+
+                <EditText
+                    android:id="@+id/疼痛肿胀1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="LabelFor"
+                    android:text=""
+                    android:hint="如：疼痛3个月"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+
+            <!--第二层 现病史层-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+
+                android:text="现病史:"/>
+            <!--    现病史1    -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.患病时间"/>
+                <EditText
+                    android:id="@+id/主诉患病时间"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="如：3个月"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，起病缓急"/>
+                <Spinner
+                    android:id="@+id/起病缓急"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/急性慢性"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="症状"/>
+                <Spinner
+                    android:id="@+id/症状"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/无痛疼痛肿胀"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，可能的诱因"
+                    />
+                <EditText
+                    android:id="@+id/可能的诱因"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无明显诱因"
+                    android:hint="请填写诱因"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.主要症状特点：出现症状部位："/>
+                <Spinner
+                    android:id="@+id/出现症状部位"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/大腿小腿膝关节"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，疼痛性质："/>
+                <Spinner
+                    android:id="@+id/疼痛性质"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/持续间歇等"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="持续时间："/>'
+                <EditText
+                    android:id="@+id/持续时间"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="如：3小时"
+                    android:text=""/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，疼痛程度："/>
+                <Spinner
+                    android:id="@+id/疼痛程度"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/轻中重"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，加重缓解情况："/>
+                <Spinner
+                    android:id="@+id/加重缓解情况"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/休息药物"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.病情发展演变："/>
+                <Spinner
+                    android:id="@+id/病情发展演变"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/加重缓解"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，病情演变时间："/>
+                <EditText
+                    android:id="@+id/病情演变时间"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="如:3小时"
+                    android:text=""/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，新近出现的症状："/>
+                <EditText
+                    android:id="@+id/新近出现的症状"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无新出现症状"
+                    android:hint="请填写症状"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.伴随症状："/>
+                <EditText
+                    android:id="@+id/伴随症状"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无发热，无胸闷，无腹痛"
+                    android:hint="全身性疼痛，发热"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.与鉴别诊断有关的阴性资料："/>
+                <EditText
+                    android:id="@+id/与鉴别诊断有关的阴性资料"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无与鉴别诊断有关的阴性资料"
+                    android:hint="外伤、剧烈运动"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:showDividers="middle"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6.诊疗经过：何时何地就诊，何种检查（有无病理诊断），考虑什么病，给予何种治疗，效果如何：" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <EditText
+                    android:id="@+id/诊疗经过"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无"
+                    android:hint="诊疗经过"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7、患者一般情况：食欲："/>
+                <Spinner
+                    android:id="@+id/食欲"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/差一般良好"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，大小便："/>
+                <Spinner
+                    android:id="@+id/大小便"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/正常便秘失禁"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，精神："/>
+                <Spinner
+                    android:id="@+id/精神"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/差一般良好"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，睡眠："/>
+                <Spinner
+                    android:id="@+id/睡眠"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/失眠一般良好"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，体重："/>
+                <EditText
+                    android:id="@+id/体重"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无明显变化"
+                    android:hint="多长时间下降多少、增加多少、无变化"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+            <!--第三层 既往史层-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+
+                android:text="既往史:"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平素健康状况:"/>
+                <Spinner
+                    android:id="@+id/平素健康状况"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/平素健康状况"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，曾患疾病: "/>
+                <EditText
+                    android:id="@+id/曾患疾病"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="否认肝炎、结核、疟疾等传染病史"
+                    android:hint="曾患疾病"
+                    android:layout_weight="1"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，外伤史: "/>
+                <Spinner
+                    android:id="@+id/外伤史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，手术史: "/>
+                <Spinner
+                    android:id="@+id/手术史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有无高血压等:"/>
+                <Spinner
+                    android:id="@+id/高血压等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/高血压等"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，治疗情况:"/>
+                <EditText
+                    android:id="@+id/高血压等治疗情况"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="否认“高血压、糖尿病、冠心病”等病史"
+                    android:hint="治疗情况"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="传染病史:"/>
+                <Spinner
+                    android:id="@+id/有无传染病"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                <Spinner
+                    android:id="@+id/疟疾等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/疟疾等"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="病史以及接触史，其他:"/>
+                <EditText
+                    android:id="@+id/其他传染病史"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="否认输血史"
+                    android:hint="其他传染病史"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预防接种史:"/>
+                <EditText
+                    android:id="@+id/预防接种史"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="按计划接种"
+                    android:hint="预防接种史"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="药物、食物过敏史:"/>
+                <Spinner
+                    android:id="@+id/药物过敏史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，过敏原:"/>
+                <EditText
+                    android:id="@+id/过敏原"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="无已知过敏原"
+                    android:hint="PG、磺胺类药、其他"
+                    />
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+            <!--第四层 个人史-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+
+                android:text="个人史:"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生地:"/>
+                <EditText
+                    android:id="@+id/出生地"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，曾到过："/>
+                <EditText
+                    android:id="@+id/曾到过"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，居住环境："/>
+                <Spinner
+                    android:id="@+id/居住环境"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/差一般良好"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吸烟史:"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/嗜烟"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，约："
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/抽烟年"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="无则填0"
+                    android:text="0"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年，平均："
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/抽烟根"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="无则填0"
+                    android:text="0"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支/日。"
+                    android:textSize="16sp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="嗜酒："
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/嗜酒"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，约："
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/喝酒年"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="无则填0"
+                    android:text="0"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年，平均"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/喝酒两"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="无则填0"
+                    android:text="0"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="两/日"
+                    android:textSize="16sp"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="疫区居留史:"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/疫区居留史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，重大精神创伤史:"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/重大精神创伤史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，毒品接触史:"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/毒品接触史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，毒物接触史:"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/毒物接触史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，放射性物质接触史:"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/放射性物质接触史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="，冶游史:"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/冶游史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+
+
+
+            <!--第五层 婚姻史层-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+
+                android:text="婚姻史:"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="婚育情况:"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/结婚年龄"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="如：适龄结婚，婚后育有1女"
+                    android:text="未婚"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配偶情况:"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/配偶情况"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="无配偶子女"
+                    android:hint="如：配偶及子女均体健"
+                    />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+            <!--第五层 月经生育史层-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+
+                android:text="月经史生育史:"/>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="初潮年龄"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/初潮年龄"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="岁，经期"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/经期"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天，周期"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/周期"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天"
+                    android:textSize="16sp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="绝经年龄"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/绝经年龄"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="填写：绝经年龄/未绝经"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="岁。末次月经（年月日）："
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/末次月经"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="如：2021.1.1"
+                    android:text=""/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经量："
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/经量"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/多正常少"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有无血块："
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/有无血块"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有无痛经："/>
+                <Spinner
+                    android:id="@+id/有无痛经"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="白带："/>
+                <Spinner
+                    android:id="@+id/白带"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/正常异常"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结婚年龄："/>
+                <EditText
+                    android:id="@+id/几岁结婚"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="岁，生育："/>
+                <EditText
+                    android:id="@+id/生育几胎"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="无则填0"
+                    android:text=""/>
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胎，是否有早产等情况："/>
+                <Spinner
+                    android:id="@+id/有无早产等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/有无"/>
+                <Spinner
+                    android:id="@+id/早产等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/早产等"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/teal_700"/>
+
+
+
+
+
+
+
+            <!--第六层 家族史层-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers= "beginning|end"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                android:orientation="vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+
+                android:text="家族史:"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <EditText
+                    android:id="@+id/家族史等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="家族中无传染病及遗传病史"/>
+                <!--            <TextView-->
+                <!--                android:textSize="16sp"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="父"/>-->
+                <!--            <EditText-->
+                <!--                android:id="@+id/父健在"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="健在"-->
+                <!--                android:hint="患病"/>-->
+                <!--            <EditText-->
+                <!--                android:id="@+id/父已故"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text=""-->
+                <!--                android:hint="死因\病因（无则不填）"-->
+                <!--                />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <!--            <TextView-->
+                <!--                android:textSize="16sp"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="母"/>-->
+                <!--            <EditText-->
+                <!--                android:id="@+id/母健在"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="健在"-->
+                <!--                android:hint="患病"/>-->
+                <!--            <EditText-->
+                <!--                android:id="@+id/母已故"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text=""-->
+                <!--                android:hint="死因\病因（无则不填）"-->
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <!--            <TextView-->
+                <!--                android:textSize="16sp"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="兄弟姐妹及子女："/>-->
+                <!--            <EditText-->
+                <!--                android:id="@+id/兄弟姐妹及子女"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="正常"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_line"
+                android:padding="10dp"
+                tools:ignore="MissingConstraints">
+                <!--            <TextView-->
+                <!--                android:textSize="16sp"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="其他："/>-->
+                <!--            <EditText-->
+                <!--                android:id="@+id/其他家族史"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="正常"/>-->
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle|end"
+                android:divider="@drawable/divider_line"
+                tools:ignore="MissingConstraints">
+
+                <!--确认-->
+
+                <Button
+                    android:id="@+id/确认信息"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认信息"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200px" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

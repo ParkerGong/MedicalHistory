@@ -1,0 +1,2 @@
+mongodb-windows-x86_64-enterprise-5.0.2-signed.msi
+nginx-1.18.0

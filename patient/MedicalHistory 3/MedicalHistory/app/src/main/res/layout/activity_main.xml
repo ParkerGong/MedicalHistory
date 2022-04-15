@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xml:include="./fragment_main1.xml"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MedicalHistory.AppBarOverlay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="left">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/appbar_padding"
+                android:text="@string/name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+
+
+            <Button
+                android:id="@+id/lianjie"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_shape"
+                android:foregroundGravity="center"
+                android:shadowColor="@color/black"
+                android:text="连接服务器"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="start|bottom" />
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/bed"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:background="@drawable/bt_shape"-->
+<!--                android:shadowColor="@color/black"-->
+<!--                android:foregroundGravity="center"-->
+<!--                android:text="上传床号"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Button"-->
+<!--                app:layout_anchor="@+id/view_pager"-->
+<!--                app:layout_anchorGravity="end|bottom" />-->
+
+
+<!--            <TextView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_shape"
+                android:shadowColor="@color/black"
+                android:foregroundGravity="center"
+                android:text="@string/send"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="end|bottom" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/number"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:minHeight="16sp"-->
+<!--                android:padding="@dimen/appbar_padding"-->
+<!--                android:text="床号:"/>-->
+<!--            <EditText-->
+<!--                android:id="@+id/number1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="none"-->
+<!--                android:hint="如1床"-->
+<!--                android:autofillHints="1"-->
+<!--                android:layout_weight="1"-->
+<!--                android:textSize="65px"-->
+<!--                tools:ignore="LabelFor"-->
+<!--                />-->
+
+            <Spinner
+                android:id="@+id/bednumber1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:entries="@array/床号" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="病历ID"
+                />
+            <EditText
+                android:id="@+id/病历ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+            <Button
+                android:id="@+id/确认ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认ID"/>
+            <TextView
+                android:id="@+id/tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/appbar_padding"
+                android:text="@string/hint"
+                android:textColor="@color/black"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="bottom|center" />
+
+            <Button
+                android:id="@+id/reboot"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_shape"
+                android:shadowColor="@color/black"
+                android:foregroundGravity="center"
+                android:text="重制所有"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                app:layout_anchor="@+id/view_pager"
+                app:layout_anchorGravity="end|bottom" />
+
+        </LinearLayout>
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorControlActivated" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
